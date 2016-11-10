@@ -4,7 +4,7 @@
         height:500px;"> v8
       <div class="row">
         <div class="col-md-6" style="box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444444;
-            height:220px; box-sizing: border-box"> v8v4r1c1
+            height:220px;"> v8v4r1c1
         </div>
         <div class="col-md-6" style="box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444444;
             height:220px;"> v8v4r1c2
@@ -38,3 +38,55 @@
   </div>
 
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="input-group-md">
+            <input type="text" class="form-control" id="edit1">
+          </div>
+        </div>
+        <div class="col-md-1">
+          <label>X</label>
+        </div>
+        <div class="col-md-3">
+          <div class="input-group-md">
+            <input type="text" class="form-control" id="edit2">
+          </div>
+        </div>
+        <div class="col-md-1">
+          <label>=</label>
+        </div>
+
+        <div class="col-md-3">
+          <div class="input-group-md">
+            <input type="text" class="form-control" id="edit3">
+          </div>
+        </div>
+        <div class="row">
+          <input type="button" id="myButton" class="btn btn-primary" value="Result">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  $('#myButton').on('click', function () {
+    val1 = Number(document.getElementById("edit1").value)
+    val2 = Number(document.getElementById("edit2").value)
+    if (isNaN(val1)){
+      edit1.style.backgroundColor = 'red'
+    }
+    if (isNaN(val2)){
+      edit2.style.backgroundColor = 'red'
+    }
+    else
+    {
+      edit3.value = val1*val2
+    }
+  })
+</script>
