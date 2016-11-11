@@ -76,17 +76,19 @@
 
 <script>
   $('#myButton').on('click', function () {
-    val1 = Number(document.getElementById("edit1").value)
-    val2 = Number(document.getElementById("edit2").value)
-    if (isNaN(val1)){
-      edit1.style.backgroundColor = 'red'
+    val1 = Number($("#edit1").val())
+    val2 = Number($("#edit2").val())
+    if (isNaN(val1) | val1 == 0){
+      $("#edit1").css("border", "9px solid red")
+
     }
-    if (isNaN(val2)){
-      edit2.style.backgroundColor = 'red'
+    else
+    if (isNaN(val2) | val2 == 0){
+      $("#edit2").css("border", "9px solid red")
     }
     else
     {
-      edit3.value = val1*val2
+      $("#edit3").val(val1*val2)
     }
   })
 </script>
